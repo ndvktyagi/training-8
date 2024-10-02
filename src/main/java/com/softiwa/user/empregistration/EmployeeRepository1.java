@@ -20,7 +20,7 @@ public class EmployeeRepository1 {
         try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
              PreparedStatement preparedStatement = connection.prepareStatement(insertSQL)) {
 
-            preparedStatement.setLong(1, employeeDto.getEmpId());
+           // preparedStatement.setUUID(1, employeeDto.getEmpId());
             preparedStatement.setString(2, employeeDto.getEmpName());
             preparedStatement.setString(3, employeeDto.getEmpEmailId());
             preparedStatement.setLong(4, employeeDto.getEmpMobileNo());
